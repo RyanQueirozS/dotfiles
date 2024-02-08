@@ -3,9 +3,6 @@ My most important config files
 
 ## Distro
 I used arch previously. Today i'm running xfce Mint, with i3.\
-The reason why i switch to mint, is just that arch didn't feel good enough for
-a work environment, especially because i'm not a linux lord. I want to switch
-to gentoo but i'm not goint to do it soon, maybe if I get a new pc.
 
 ## Nvim
 I used packer, but because it got discontinued and lazy is now the big

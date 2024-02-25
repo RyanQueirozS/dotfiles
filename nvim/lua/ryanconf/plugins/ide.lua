@@ -22,40 +22,40 @@ return {
 	},
 	{ "nvim-treesitter/playground" },
 
-    -- git
-    {
-        "NeogitOrg/neogit",
-        dependencies = {
-            "nvim-lua/plenary.nvim", -- required
-            "nvim-telescope/telescope.nvim", -- optional
-            "sindrets/diffview.nvim", -- optional
-            "ibhagwan/fzf-lua", -- optional
-        },
-        config = function(_, _)
-            require("ryanconf.custom.neogit")
-        end,
-    },
-    {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("ryanconf.custom.gitsigns")
-        end,
-    },
-    { "akinsho/git-conflict.nvim", version = "*", config = true },
-    {
-        "tpope/vim-fugitive",
-        config = function(_, _)
-            require("ryanconf.custom.fugitive")
-        end,
-    },
-    -- nvim v0.8.0
-    {
-        "kdheepak/lazygit.nvim",
-        -- optional for floating window border decoration
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-    },
+	-- git
+	{
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim", -- required
+			"nvim-telescope/telescope.nvim", -- optional
+			"sindrets/diffview.nvim", -- optional
+			"ibhagwan/fzf-lua", -- optional
+		},
+		config = function(_, _)
+			require("ryanconf.custom.neogit")
+		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("ryanconf.custom.gitsigns")
+		end,
+	},
+	{ "akinsho/git-conflict.nvim", version = "*", config = true },
+	{
+		"tpope/vim-fugitive",
+		config = function(_, _)
+			require("ryanconf.custom.fugitive")
+		end,
+	},
+	-- nvim v0.8.0
+	{
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
 
 	{
 		"folke/trouble.nvim",

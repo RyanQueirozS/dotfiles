@@ -46,10 +46,10 @@ return {
 
 	-- Formatting
 	{
-		"nvimtools/none-ls.nvim",
+		"stevearc/conform.nvim",
+		opts = {},
 		config = function()
-			require("ryanconf.custom.nonels")
+			require("ryanconf.custom.formatter")
 		end,
-		requires = { "nvim-lua/plenary.nvim" },
 	},
 }

@@ -15,7 +15,7 @@ require("nvim-tree").setup({
 		side = "left",
 		width = 30,
 	},
-	git = { enable = true, ignore = false, timeout = 500 },
+	git = { enable = true, ignore = true, timeout = 500 },
 	actions = { open_file = { quit_on_open = true } },
 	filters = { dotfiles = false, custom = { "^.DS_Store$", "^\\.git$" } },
 	on_attach = my_on_attach,

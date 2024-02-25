@@ -243,7 +243,7 @@ exec -q <notification daemon>
 exec_always --no-startup-id dunst -config "~/.config/dunst/dunstrc"
 
 # picom
-exec picom -b
+exec picom --experimental-backends -b
 
 # redshift
 exec redshift

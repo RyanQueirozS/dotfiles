@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", "<cmd> NvimTreeFindFileToggle<CR>") -- replaced with nvim tree
-vim.keymap.set("n", "<leader>pc", "<cmd> NvimTreeCollapse<CR>")       -- replaced with nvim tree
+-- vim.keymap.set("n", "<leader>pv", "<cmd> NvimTreeFindFileToggle<CR>") -- replaced with nvim tree
+-- vim.keymap.set("n", "<leader>pc", "<cmd> NvimTreeCollapse<CR>") -- replaced with nvim tree
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -37,10 +38,10 @@ vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
 
 --Random stuff
 vim.keymap.set("n", "<leader>gr", function()
-    vim.lsp.buf.references()
+	vim.lsp.buf.references()
 end, opts)
 vim.keymap.set("n", "<leader>rn", function()
-    vim.lsp.buf.rename()
+	vim.lsp.buf.rename()
 end, opts)
 
 --Dap
@@ -49,3 +50,6 @@ vim.keymap.set("n", "<leader>dr", "<cmd> DapContinue <CR>")
 
 --UndoTree
 vim.keymap.set("n", "<leader>ud", "<cmd> UndotreeToggle <CR>")
+
+-- mistakes
+vim.cmd([[command! -nargs=0 W :write]])

@@ -27,3 +27,5 @@ vim.opt.updatetime =
 50
 
 vim.opt.colorcolumn = "81"
+
+vim.opt.clipboard = unnamedplus

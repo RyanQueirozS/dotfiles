@@ -1,6 +1,15 @@
 return {
 	-- Everything in here is in regars to coding and/or note taking
 
+	-- My plugins
+	{
+		dir = "~/projects/lua/NodeView", -- Your path
+		name = "node-view",
+		config = function()
+			require("node-view")
+		end,
+	},
+
 	-- Cool to have
 	{
 		"ThePrimeagen/harpoon",
@@ -30,6 +39,8 @@ return {
 	{ "mbbill/undotree" },
 	{ "christoomey/vim-tmux-navigator" },
 	{ "RaafatTurki/hex.nvim" },
+	{ "voldikss/vim-floaterm" },
+	{ "windwp/nvim-ts-autotag" },
 
 	-- Notes
 	{

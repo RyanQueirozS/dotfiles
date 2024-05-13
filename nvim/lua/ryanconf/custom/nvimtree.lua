@@ -12,7 +12,7 @@ end
 require("nvim-tree").setup({
 	---
 	view = {
-		side = "left",
+		side = "right",
 		width = 30,
 	},
 	git = { enable = true, ignore = true, timeout = 500 },

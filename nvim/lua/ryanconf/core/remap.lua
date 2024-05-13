@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
--- vim.keymap.set("n", "<leader>pv", "<cmd> NvimTreeFindFileToggle<CR>") -- replaced with nvim tree
--- vim.keymap.set("n", "<leader>pc", "<cmd> NvimTreeCollapse<CR>") -- replaced with nvim tree
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", "<cmd> NvimTreeFindFileToggle<CR>") -- replaced with nvim tree
+vim.keymap.set("n", "<leader>pc", "<cmd> NvimTreeCollapse<CR>") -- replaced with nvim tree
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -53,3 +53,6 @@ vim.keymap.set("n", "<leader>ud", "<cmd> UndotreeToggle <CR>")
 
 -- mistakes
 vim.cmd([[command! -nargs=0 W :write]])
+
+-- Floaterm
+vim.keymap.set("n", "<leader>ft", "<cmd> FloatermNew <CR>")

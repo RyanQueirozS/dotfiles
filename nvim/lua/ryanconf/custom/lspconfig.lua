@@ -40,6 +40,7 @@ require("mason").setup({
 		"clangd",
 		"clang_format",
 		"codelldb",
+		"lua_ls",
 		"rust_analyzer",
 	},
 })
@@ -49,13 +50,6 @@ require("mason-lspconfig").setup({
 	handlers = {
 		default_setup,
 		lua_ls = function()
-			require("lspconfig").clangd.setup({
-				cmd = {
-					"clangd",
-				},
-				filetypes = {},
-				root_pattern = { ".clang_format" },
-			})
 			require("lspconfig").rust_analyzer.setup({
 				cmd = {
 					"rust_analyzer",
@@ -87,6 +81,22 @@ require("mason-lspconfig").setup({
 				},
 				single_file_support = true,
 			})
+			require("lspconfig").lua_ls.setup({
+				cmd = {
+					"lua-language-server",
+				},
+				filetypes = { "lua" },
+			})
 		end,
+	},
+})
+
+require("lspconfig").lua_ls.setup({
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
 	},
 })

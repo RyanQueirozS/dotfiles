@@ -2,18 +2,16 @@
 My most important config files
 
 ## Distro
-I used arch previously. Today i'm running xfce Mint, with i3.\
+I've used Arch, Mint, Debian and Ubuntu, now I'm trying OpenSUSE. Debian and
+OpenSUSE are the ones I like the most, Debian is used everywhere and it's easy
+to follow guides, while OpenSUSE with BTRFS is amazing and I rarely need to
+build anything manually.
 
 ## Nvim
-I used packer, but because it got discontinued and lazy is now the big
-think, i've updated my distro to it. I don't feel like using other editors now. 
-
-## Kitty
-Kitty is simpler than alacritty and I just don't feel like changing the
-terminal emulator for no reason.
+To check my Neovim config [click here](https://github.com/RyanQueirozS/nvim-conf)
 
 ## Discaimer
-Some of the configs in there where not created by me. I try to give credits to
-the creators, but if i've missed one, please tell me\
-If you think that you might like this configs try it out and tell me where you
-think i could improve them.
+Some of the configs in there were not created by me. I try to give credit to
+the creators, but if I've missed one, please tell me. If you think that you
+might like this config try it out and tell me where you think i could improve
+them.

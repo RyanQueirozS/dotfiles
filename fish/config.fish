@@ -4,18 +4,26 @@ end
 set fish_greeting
 
 alias vim nvim
+alias v nvim
 alias ls exa
 alias cat cat
-alias pomors "exec ~/.cargo/bin/pomors"
-alias vconf "cd ~/.config/nvim"
-alias v nvim
-alias h helix
 alias c clear
-alias td "todo.sh"
 alias g "exec ~/.local/bin/tmux-sessionizer"
+alias ta "tmux a"
 
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOROOT/bin $GOPATH/bin /usr/local/go/bin
+set -x PATH $PATH $HOME/.config/emacs/bin/
+set -x PATH $PATH $HOME/.cargo/bin/
+set -x PATH $PATH $HOME/.cargo/bin/
+set -x PATH $PATH $HOME/.local/bin/
+set -x DENO_INSTALL $HOME/.deno
+set -x PATH $PATH $DENO_INSTALL/bin
+
+set -x HELIX_RUNTIME $HOME/.config/helix/runtime
+
 set -x TERM kitty
-set -x RUST_SRC_PATH $HOME/.cargo/bin/
 set -x EDITOR nvim
+
+set -x LD_LIBRARY_PATH $HOME/.local/lib $LD_LIBRARY_PATH
+set -x PKG_CONFIG_PATH $HOME/.local/lib/pkgconfig $PKG_CONFIG_PATH

@@ -5,10 +5,10 @@
  */
 
 * {
-   background-color:      Black;
+    background-color:      Black;
     border-color:          White;
     text-color:           White;
-    font:            "JetBrainsMono Nerd Font Medium 10";
+    font:            "Times New Roman 9";
 }
 window {
     anchor:     north;
@@ -41,4 +41,3 @@ element-text, element-icon {
   background-color: inherit;
   text-color: inherit;
 }
-

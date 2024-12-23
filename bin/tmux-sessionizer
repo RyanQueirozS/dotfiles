@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/.local/bin ~/advent-of-code/  ~/leetcode/cpp ~/leetcode ~/work/ ~/personal/ ~/projects/cpp/ ~/.config/ ~/.config/nvim-mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/.local/bin ~/projects/*/ ~/leetcode/*/ ~/lessons/*/ ~/Notes/*/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

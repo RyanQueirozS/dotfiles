@@ -1,0 +1,15 @@
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "c"
+auto-format = true
+file-types = ["h", "c"]
+
+[[language]]
+name = "markdown"
+auto-format = true
+file-types = ["md"]
+language-servers = [ "marksman" ]
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}

@@ -1,0 +1,15 @@
+theme = "ao"
+
+[editor]
+line-number = "relative"
+mouse = false
+bufferline = "multiple"
+
+[keys.normal]
+C-c = ["collapse_selection", "keep_primary_selection"]
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.soft-wrap]
+enable = true

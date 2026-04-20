@@ -3,13 +3,51 @@ name = "rust"
 auto-format = true
 
 [[language]]
-name = "c"
-auto-format = true
-file-types = ["h", "c"]
-
-[[language]]
 name = "markdown"
 auto-format = true
 file-types = ["md"]
 language-servers = [ "marksman" ]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
+name = "sql"
+auto-format = true
+file-types = ["sql"]
+formatter = { command = "sleek"}
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "gofmt"}
+
+[[language]]
+name = "json"
+auto-format = false
+
+[[language]]
+name = "c"
+auto-format = true
+file-types = ["c", "h"]
+
+[[language]]
+name = "toml"
+
+[[language]]
+name = "lua"
+auto-format = true
+
+[[language]]
+name = "html"
+auto-format = true
+formatter = { command = "npx", args = ["prettier", "--write", "--parser", "html"] }
+file-types = ["html"]
+
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "npx", args = ["prettier", "--write", "--parser", "typescript"] }
+
+[[language]]
+name = "latex"
+auto-format = true
+file-types = ["tex"]

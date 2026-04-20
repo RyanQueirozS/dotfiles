@@ -1,0 +1,106 @@
+"comment" = "#80a0ff"
+
+"constant" = "magenta"
+"constant.builtin" = "cyan"
+"constant.character" = "lightpink"
+"constant.numeric" = "orange"
+"constant.character.escape" = "orange"
+
+"string" = "lightpink"
+"string.regexp" = "lightpink"
+"string.special" = "lightpink"
+
+"variable" = "lightgrey"
+"variable.parameter" = "cyan"
+"variable.builtin" = "orange"
+
+"function" = "cyan"
+"function.method" = "black"
+"function.builtin" = "black"
+"function.macro" = "magenta"
+"function.special" = {fg = "magenta", modifiers = ["bold"]}
+
+"diff.plus" = "cyan"
+"diff.minus" = "orange"
+"diff.delta" = "magenta"
+"diff.delta.moved" = "yellow"
+
+"keyword" = {fg = "yellow", modifiers = ["bold"]}
+"keyword.control.import" = "orange"
+"keyword.directive" = "magenta"
+
+"operator" = "yellow"
+
+"type" = {fg= "green", modifiers =["bold"] }
+"type.builtin" = "orange"
+
+"namespace" = "green"
+
+"punctuation" = "orange"
+
+"constructor" = "green"
+
+"ui.background" = { fg = "white", bg = "black" }
+"ui.bufferline" = { fg = "white", bg = "blue" }
+"ui.bufferline.active" = { fg = "blue", bg = "white" }
+"ui.cursor" = { fg = "black", bg = "white" }
+"ui.cursorline" = { bg = "gray" }
+"ui.selection" = { fg = "black" , bg = "#80a0ff" , modifiers = ["bold"]}
+"ui.statusline" = { fg = "white", bg = "blue" }
+"ui.statusline.inactive" = { fg = "white", bg = "blue" }
+"ui.linenr" = "yellow"
+"ui.linenr.selected" = { fg = "yellow", modifiers = ["bold"] }
+"ui.menu" = { fg = "black", bg = "brightcyan" }
+"ui.menu.selected" = { fg = "black", bg = "cyan" }
+"ui.popup" = { bg = "gray" }
+"ui.help" = { bg = "gray" }
+"ui.virtual" = "darkgray"
+"ui.virtual.ruler" = { bg = "darkred" }
+
+"diagnostic.error" = { fg = "red", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "orange", modifiers = ["bold"] }
+"diagnostic.info" = { fg = "cyan", modifiers = ["bold"] }
+"diagnostic.hint" = { fg = "seagray", modifiers = ["bold"] }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"error" = "red"
+"warning" = "orange"
+"info" = "cyan"
+"hint" = "seagray"
+
+"markup.heading" = { fg = "magenta", modifiers = ["bold"] }
+"markup.bold" = { fg = "white", modifiers = ["bold"] }
+"markup.italic" = { fg = "white", modifiers = ["italic"] }
+"markup.link" = { fg = "blue", modifiers = ["underlined"] }
+"markup.list" = { fg = "white" }
+"markup.quote" = { fg = "darkgray", modifiers = ["italic"] }
+
+[palette]
+black = "#000000"
+white = "#ffffff"
+darkred = "#8b0000"
+darkyellow = "#cc8000"
+yellow = "#ffff00"
+darkblue = "#0000ee"
+green = "#00ff00"
+blue = "#0000ff"
+magenta = "#ff00ff"
+cyan = "#00cdcd"
+lightgrey = "#e5e5e5"
+grey = "#7f7f7f"
+darkgrey = "#666666"
+lightblue = "#5c5cff"
+lightgreen = "#60ff60"
+lightmagenta = "#cd00cd"
+lightcyan = "#00ffff"
+red = "#cd0000"
+orange = "#ffa500"
+lightyellow = "#ffff60"
+lightpurple = "#80a0ff"
+lightred = "#ff0000"
+darkgreen = "#2e8b57"
+darkpurple = "#5c5cff"
+lightpink = "#ffa0a0"
+deepred = "#af5faf"
+gold = "#ffd700"

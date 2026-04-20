@@ -2,10 +2,7 @@
 My most important config files
 
 ## Distro
-I've used Arch, Mint, Debian and Ubuntu, now I'm trying OpenSUSE. Debian and
-OpenSUSE are the ones I like the most, Debian is used everywhere and it's easy
-to follow guides, while OpenSUSE with BTRFS is amazing and I rarely need to
-build anything manually.
+OpenSUSE. Mostly used Ubuntu and debian, but OpenSUSE just hits different.
 
 ## Nvim
 To check my Neovim config [click here](https://github.com/RyanQueirozS/nvim-conf)

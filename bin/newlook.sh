@@ -7,6 +7,6 @@ xwallpaper --zoom $wall
 
 #$HOME/alacritty-color-export/script.sh
  
- betterlockscreen -u $wall
+# betterlockscreen -u $wall
   
-  xdotool key super+shift+r
+xdotool key super+shift+r

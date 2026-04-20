@@ -3,7 +3,8 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/.local/bin ~/projects/*/ ~/leetcode/*/ ~/lessons/*/ ~/Notes/*/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/.local/bin ~/projects/*/ ~/work/*/ ~/leetcode/*/ ~/lessons/*/ ~/Notes/*/ \
+        -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
@@ -13,13 +14,36 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
+# If tmux is not running at all
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s "$selected_name" -c "$selected" -d
+
+    # Editor window
+    tmux rename-window -t "$selected_name:1" editor
+    tmux send-keys -t "$selected_name:editor" "e" C-m
+
+    # Additional windows (corrected)
+    tmux new-window -t "$selected_name" -n sh  -c "$selected" "fish"
+    tmux new-window -t "$selected_name" -n sh2 -c "$selected" "fish"
+    tmux new-window -t "$selected_name" -n proc -c "$selected" "fish"
+
+    tmux select-window -t "$selected_name:editor"
+    tmux attach -t "$selected_name"
     exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+# If tmux is running but the session doesn't exist yet
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected"
+
+    tmux rename-window -t "$selected_name:1" editor
+    tmux send-keys -t "$selected_name:editor" "e" C-m
+
+    tmux new-window -t "$selected_name" -n sh  -c "$selected" "fish"
+    tmux new-window -t "$selected_name" -n sh2 -c "$selected" "fish"
+    tmux new-window -t "$selected_name" -n proc -c "$selected" "fish"
+
+    tmux select-window -t "$selected_name:editor"
 fi
 
-tmux switch-client -t $selected_name
+tmux switch-client -t "$selected_name"

@@ -2,6 +2,5 @@
 
 THESE SCRIPTS ARE MOSTLY FROM OTHER PEOPLE. NO CREDITS GO TO ME.
 
-## Additions
-
-I like to use boomer, aka tsodings zoom program
+- batterynotify and changebrightness are from Eric Murphy
+- tmux-sessionizer is from theprimeagen

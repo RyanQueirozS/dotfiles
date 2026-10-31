@@ -3,9 +3,6 @@ if status is-interactive
 end
 set fish_greeting
 
-alias ls exa
-alias cat cat
-alias c clear
 alias g "exec ~/.local/bin/tmux-sessionizer"
 alias ta "tmux a"
 alias e hx
@@ -28,7 +25,6 @@ end
 
 set -x GOPATH $HOME/go
 set -x GOROOT /usr/local/go
-set -x DENO_INSTALL $HOME/.deno
 set -x HELIX_RUNTIME $HOME/.config/helix/runtime
 set -x EDITOR hx
 

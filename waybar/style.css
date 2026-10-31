@@ -1,0 +1,39 @@
+@define-color gruv-black #282828;
+@define-color gruv-white #ebdbb2;
+@define-color gruv-green #b8bb26;
+@define-color gruv-red #fb4934;
+
+.bar1 {
+	font-family: DepartureMono Nerd Font;
+	background-color: transparent;
+}
+
+#workspaces,
+#clock,
+#utils {
+	padding-left: 20px;
+	padding-right: 20px;
+	color: @gruv-white;
+	background-color: @gruv-black;
+	border-radius: 20px;
+}
+
+#workspaces button {
+	font-size: 10px;
+	padding: 5px;
+	color: @gruv-green;
+	transition: color 0.5s ease-in-out, font-size .2s ease-in-out;
+}
+
+#workspaces button.active {
+	font-size: 18px;
+	color: @gruv-red;
+}
+
+#memory,
+#wireplumber.sink,
+#backlight,
+#tray,
+#network {
+	padding-left: 10px;
+}

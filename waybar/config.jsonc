@@ -1,0 +1,111 @@
+{
+    "name": "bar1",
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin": "5 8 -4 8",
+    "reload_style_on_change": true,
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "group/utils"
+    ],
+
+    
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": " ",
+            "default": " "
+        },
+    },
+
+    // This follow the gruvbox colors
+    "clock": {
+        "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
+        "tooltip-format": "<span color='#e0e2ea'><big>{:%Y %B}</big></span>\n<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "months": "<span color='#ebdbb2'><b>{}</b></span>",
+                "days": "<span color='#fb4934'>{}</span>",
+                "weeks": "<span color='#b8bb26'><b>W{}</b></span>",
+                "weekdays": "<span color='#83a598'><b>{}</b></span>",
+                "today": "<span color='#fe8019'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "group/utils": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "network",
+            "wireplumber#sink",
+            "backlight",
+            "tray",
+        ],
+    },
+    
+    "cpu": {
+        "format": "󰘚 {usage}%",
+        "tooltip": true,
+        "interval": 1,
+    },
+    "memory": {
+        "format": "󰍛 {}%",
+        "interval": 1,
+    },
+
+    "network": {
+        "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-disconnected": "󰖪 Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click-right": "kitty -e nmtui"
+    },
+    "wireplumber#sink": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 1%-",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 1%+"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 5
+    },
+}

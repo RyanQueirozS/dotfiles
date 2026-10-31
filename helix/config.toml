@@ -1,4 +1,4 @@
-theme = "adwaita-dark"
+theme = "adwaita-dark-transparent"
 
 [editor]
 line-number = "relative"

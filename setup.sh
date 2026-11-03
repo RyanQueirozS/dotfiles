@@ -21,3 +21,7 @@ ln -s -f $(pwd)/tmux/* ~/.config/tmux
 # Waybar
 mkdir ~/.config/waybar
 ln -s -f $(pwd)/waybar/* ~/.config/waybar
+
+# Fuzzel
+mkdir ~/.config/fuzzel
+ln -s -f $(pwd)/fuzzel/* ~/.config/fuzzel

@@ -102,6 +102,7 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-at-startup "pipewire"
+spawn-at-startup "easyeffects -w"
 spawn-sh-at-startup "~/.local/bin/newlook.sh"
 
 hotkey-overlay {
@@ -136,6 +137,14 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match app-id="^kitty$"
+
+    background-effect {
+        blur true
+    }
 }
 
 binds {
@@ -261,6 +270,10 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+E { quit; }
+
+    // Brightness commands
+    Mod+Shift+B { spawn-sh "changebrightness down"; }
+    Mod+Ctrl+B { spawn-sh "changebrightness up"; }
 
     // I don't see why one might use this, but here it is
     // Mod+Shift+P { power-off-monitors; }

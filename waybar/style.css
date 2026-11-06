@@ -1,7 +1,7 @@
 @define-color gruv-black #282828;
-@define-color gruv-white #ebdbb2;
-@define-color gruv-green #b8bb26;
-@define-color gruv-red #fb4934;
+@define-color gruv-white #f2e5bc;
+@define-color gruv-blue #83a598;
+@define-color gruv-purple #8f3f71;
 
 .bar1 {
 	font-family: DepartureMono Nerd Font;
@@ -13,22 +13,22 @@
 #utils {
 	padding-left: 20px;
 	padding-right: 20px;
-	color: @gruv-white;
-	background-color: @gruv-black;
+	color: @gruv-black;
+	background-color: @gruv-white;
 	border-radius: 20px;
 }
 
 #workspaces button {
 	font-size: 10px;
 	padding-left: 19px;
-	color: @gruv-green;
+	color: @gruv-blue;
 	transition: color 0.5s ease-in-out, font-size .2s ease-in-out;
 }
 
 #workspaces button.active {
 	padding-left: 22px;
 	font-size: 18px;
-	color: @gruv-red;
+	color: @gruv-purple;
 }
 
 #memory,

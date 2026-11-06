@@ -1,0 +1,4 @@
+inherits = "gruvbox_light_soft"
+
+"ui.linenr" = "#0000ff"
+"ui.linenr.selected" = "#ff0000"
